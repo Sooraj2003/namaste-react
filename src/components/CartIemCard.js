@@ -1,7 +1,7 @@
 import CardAddButton from "./CartAddButton";
 import { RES_URL } from "../utils/constants";
 import { useContext ,useEffect} from "react";
-import BillContext from "../utils/billContext";
+import BillContext from "../utils/BillContext";
 
 
 const CartItemCard = ({items,dummy}) => {
