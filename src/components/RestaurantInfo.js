@@ -2,7 +2,7 @@
 import {useParams} from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
-import ItemCard from "./itemCard";
+
 import { useState } from "react";
 import Restaurant from "./Restaurant";
 
