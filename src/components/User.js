@@ -7,9 +7,9 @@ const User = ({name,location,socials}) =>{
     // async function fetchData(){
     //     const daat 
     // }
-    console.log("useEffect called");
+    ;
     const timer = setInterval(()=>{
-      console.log("SetInteval inside functional");
+    
       
     },1000)
 

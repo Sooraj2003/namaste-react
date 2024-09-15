@@ -49,3 +49,21 @@ Parcel
    Routing
     - Client Side Routing
     - Server Side Routing
+
+    # types of testing (done by developers)
+     - Unit testing - testing the components in isolation
+     - Integration testing - testing the components integration with other components
+     - end to end testing (e2e testing) - user enter to user exit - user flow is tested - entire app flow is tested
+
+
+   # setting up testing in my application
+     - install react testing library - build on top of dom testing library
+     - install jest - above both perfect combo
+     - insatll babel dependency and config the babel 
+     - config parcel to disable babel transpilation
+     - init jest (config jest)
+     - install jsdom for above jest 28,bcoz react testing library doesnt ship it 
+     - __tests__ dunder - folder which consists of all test files - jest checks in this folder
+     - Header.test.js/Header.spec.js
+     - config babel with @babel/preset-react to render jsx
+     - install and import @test-library/jest-dom to use tobeinthedocument and many other functions

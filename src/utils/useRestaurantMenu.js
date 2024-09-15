@@ -17,7 +17,7 @@ const useRestaurantMenu = (resId)=>{
         
         
         }
-        console.log(resMenu);
+      
         
     return [resInfo,resMenu]
 }

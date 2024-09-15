@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import ResCard, { withPromoted } from "./ResCard";
 import Shimmer from "./Shimmer"
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 
 const Body = ()=>{
@@ -18,12 +19,14 @@ const Body = ()=>{
         fetchData();
       },[]);
 
-      
+      const {userInfo,setUserName} = useContext(UserContext);
 
       const fetchData = async () => {
         try {
             const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8996676&lng=77.4826837&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
             const json = await data.json();
+           
+            
             const restaurants = json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
             
             if (restaurants) {
@@ -36,7 +39,7 @@ const Body = ()=>{
             console.error("Failed to fetch data", error);
         }
     };
-       console.log(listOfRestaurants);
+       
        
      if(onlineStatus===false){
       return <h1>hey Sweety ,your offline</h1>
@@ -46,7 +49,7 @@ const Body = ()=>{
         <div className="p-4">
            <div className="flex my-4">
             <div>
-            <input className="px-1 ml-1 border border-black border-solid rounded-md" type="text" placeholder="search for restaurants" value={value} onChange={(e)=>setValue(e.target.value)}></input>
+            <input data-testid="searchInput" className="px-1 ml-1 border border-black border-solid rounded-md" type="text" placeholder="search for restaurants" value={value} onChange={(e)=>setValue(e.target.value)}></input>
              <button className="px-2 bg-green-100 mx-4 rounded-lg font-semibold hover:bg-green-300" onClick={()=>{
               const filterdRestaurants = listOfRestaurants.filter((resObj)=> resObj.info.name.toLowerCase().includes(value.toLowerCase()));
               setListOfSearchedRestaurants(filterdRestaurants);
@@ -55,14 +58,17 @@ const Body = ()=>{
              <div>
              <button className="px-2 rounded-lg font-semibold bg-gray-100 hover:bg-gray-300" onClick={()=>{
                 const filterdRestaurants=listOfRestaurants.filter((resObj)=>{
-                    return resObj.info.avgRating>=4;
+                    return resObj.info.avgRating>=4.3;
                 });
                 setListOfSearchedRestaurants(filterdRestaurants);
                 
                 
               }}>Top Rated Restaurants</button>
-             </div>
               
+             </div>
+             <div className="mx-2">
+                <input type="text" className="border border-black" value={userInfo} onChange={(e)=>setUserName(e.target.value)}/>
+              </div>
            </div>
            <div className="flex flex-wrap">
             {listOfSearchedRestaurants.map((restaurant)=>{

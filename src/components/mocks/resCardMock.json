@@ -1,0 +1,71 @@
+
+{
+    "resData": {
+        "info": {
+            "id": "713375",
+            "name": "Big Bowl",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/22/30548ac4-2e57-4c1d-ba73-8372f74a1ad2_713375.JPG",
+            "locality": "Hoysala Circle",
+            "areaName": "Kengeri Satellite Town",
+            "costForTwo": "₹250 for two",
+            "cuisines": [
+                "North Indian",
+                "Chinese",
+                "Tibetan",
+                "Desserts"
+            ],
+            "avgRating": 4.2,
+            "parentId": "434792",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "100+",
+            "sla": {
+                "deliveryTime": 36,
+                "lastMileTravel": 4.3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "35-40 mins",
+                "lastMileTravelString": "4.3 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-09-03 01:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT ₹169"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/city/bangalore/big-bowl-hoysala-circle-kengeri-satellite-town-rest713375",
+            "type": "WEBLINK"
+        }
+    }
+}

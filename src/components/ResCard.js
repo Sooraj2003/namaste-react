@@ -1,12 +1,18 @@
+import { useContext } from "react";
 import {RES_URL} from "../utils/constants";
+import UserContext from "../utils/UserContext";
+
 
 const ResCard = (props)=>{
+   const {userInfo} = useContext(UserContext);
     const {resData}=props;
+    
+    
     const {name,cuisines,costForTwo,avgRating,slaString,cloudinaryImageId}=resData.info;
     return (
-        <div className="m-8 p-4 w-56 bg-gray-200 h-80 hover:bg-gray-300 rounded-xl ">
+        <div data-testid="resCard" className="m-8 p-4 w-56 bg-gray-200 h-96 hover:bg-gray-300 rounded-xl ">
            <div className="">
-              <img className="w-52 h-24 rounded-lg" alt="res-image" src={RES_URL+cloudinaryImageId}/>
+              <img className="w-52 h-32 rounded-lg" alt="res-image" src={RES_URL+cloudinaryImageId}/>
            </div>
            <div className="p-2 ">
             <div>
@@ -17,6 +23,7 @@ const ResCard = (props)=>{
               <div>
               <h3 className="font-semibold">{costForTwo}</h3>
               <h3 className="text-red-500">{avgRating}</h3>
+              <h3 className="text-red-500">{userInfo}</h3>
               </div>
            </div>
         </div>
@@ -25,7 +32,7 @@ const ResCard = (props)=>{
 
 export const withPromoted = (ResCard)=>{
   return (props)=>{
-   console.log({...props});
+
    
    return (
       <div className="relative">
