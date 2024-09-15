@@ -11,7 +11,7 @@ import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
-import BillContext from "./utils/billContext";
+import BillContext from "./utils/BillContext";
 //import Grocery from "./components/Grocery";
 
 const Grocery = lazy(()=> import("./components/Grocery"));
