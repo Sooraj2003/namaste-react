@@ -40,7 +40,7 @@
   "dependencies": {
     "@parcel/config-default": "^2.12.0",
     "@reduxjs/toolkit": "^2.2.7",
-    "@swc/helpers": "latest",
+    "@swc/helpers": "0.5.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
@@ -48,6 +48,6 @@
   },
   "browserslist": [
     "last 2 versions"
-  ],
-  "main": "tailwind.config.js"
+  ]
+  
 }
