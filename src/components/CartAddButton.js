@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import BillContext from "../utils/billContext";
+import BillContext from "../utils/BillContext";
 const CardAddButton = ({item})=>{
     const [itemCount,setItemCount] = useState(1);
     const {billInfo,setBill} = useContext(BillContext);

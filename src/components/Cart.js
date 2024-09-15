@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartItemCard from "./CartIemCard";
 import { useContext } from "react";
-import BillContext from "../utils/billContext";
+import BillContext from "../utils/BillContext";
 import { clearCart } from "../utils/cartSlice";
 
 const Cart = ()=>{
