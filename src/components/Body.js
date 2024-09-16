@@ -69,6 +69,7 @@ const Body = ()=>{
              <div className="mx-2">
                 <input type="text" className="border border-black" value={userInfo} onChange={(e)=>setUserName(e.target.value)}/>
               </div>
+            
            </div>
            <div className="flex flex-wrap">
             {listOfSearchedRestaurants.map((restaurant)=>{
