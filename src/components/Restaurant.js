@@ -5,7 +5,7 @@ const Restaurant = ({item,showItems,button,setShowIndex,dummy})=>{
    
     const {title,itemCards}=item.card.card;
 
-     handleClick = ()=>{
+    const handleClick = ()=>{
       
       setShowIndex();
     }
